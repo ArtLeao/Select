@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+<body>
+    <h1>Exemplo usando select, datalist e textarea.</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="estado">Selecione um estado:</label>
+            <select name="estado" id="estado">
+                <option value="">---selecione---</option>
+                <optgroup label="regiao-sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espírito Santo</option>
+                </optgroup>
+
+                <optgroup label="regiao-norte">
+                    <option value="AC">Acre</option>
+                    <option value="AM">Amazônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="AP">Amapá</option>
+                    <option value="PA">Pará</option>
+                    <option value="TO">Tocantins</option>
+                </optgroup>
+
+                <optgroup label="regiao-nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PI">Piauí</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                </optgroup>
+
+                <optgroup label="regiao-centro-oeste">
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="GO">Goias</option>
+                </optgroup>
+                
+                <optgroup label="regiao-sul">
+                    <option value="PR">Paraná</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="SC">Santa Catarina</option>
+                </optgroup>
+                
+            </select>
+        </p>
+        <p>
+            <label for="profissao">Profissão:</label>
+            <input type="text" name="profissao" id="profissao" list="lista_prof">
+            <datalist id="lista_prof">
+                <option value="ADM">Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="CNT">Cantor</option>
+                <option value="JOG">Jogador</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea cols="30" rows="10" maxlength="70" style="resize: none" placeholder="Digite aqui a sua mensagem..."></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+</body>
+</html>
